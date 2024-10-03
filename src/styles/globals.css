@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ReactModal__Body--open {
+  @apply overflow-hidden;
+}
+
+.apexcharts-tooltip {
+  @apply !bg-[#1C1F22] !text-white !border-0;
+}
+
+@layer base {
+  body {
+    @apply bg-black  text-white;
+  }
+
+  .ch-app-wrapper {
+    @apply font-poppins;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-dark;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue rounded-lg;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue;
+  }
+}
+
+@layer components {
+  .ff-menu-backdrop {
+    background: rgba(19, 21, 23, 0.7);
+    backdrop-filter: blur(2.5px);
+  }
+
+  .ff-running-text {
+    animation: scroll-left 15s linear infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@layer utilities {
+  .fx-bg-gradient-black {
+    background: linear-gradient(90deg, rgba(19, 21, 23, 0) 0%, #131517 107.43%);
+  }
+}
