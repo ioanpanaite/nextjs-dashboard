@@ -12,7 +12,7 @@ export default function ThankYou() {
             <p className="mt-6 text-base leading-7 text-gray-light">Please contact support team if you any questions.</p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link href={"/"} className="bg-blue w-40 py-2 text-sm font-semibold disabled:opacity-70 disabled:cursor-not-allowed">
-                Back home!
+                Go back home.
               </Link>
               <Link href={"/"} className="text-sm font-semibold">
                 Contact support <span aria-hidden="true">&rarr;</span>
